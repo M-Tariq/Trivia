@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Trivia</string>
+    <string name="text_true">True</string>
+    <string name="text_false">False</string>
+    <string name="todo">TODO</string>
+    <string name="question_counter">0 out of 100</string>
+    <string name="sample_question">This is sample question, how are you?</string>
+</resources>

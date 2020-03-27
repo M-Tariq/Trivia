@@ -2,6 +2,7 @@ package com.example.trivia.model;
 
 import android.util.Log;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Request;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
@@ -21,20 +22,20 @@ public class QuestionBank {
     ArrayList<Question> questionList=new ArrayList<>();
 
     public List<Question> getQuestionList(final AnswerListAsyncResponse callBack) {
-        JsonArrayRequest jsonArrayRequest=new JsonArrayRequest(Request.Method.GET, url, (JSONArray) null,
+        final JsonArrayRequest jsonArrayRequest=new JsonArrayRequest(Request.Method.GET, url, (JSONArray) null,
                 new Response.Listener<JSONArray>() {
             @Override
             public void onResponse(JSONArray response) {
                 Log.d("JSON", "" + response);
+
+
                 for (int i = 0; i < response.length(); i++) {
                     try {
                         Question question = new Question();
                         question.setAnswer(response.getJSONArray(i).get(0).toString());
                         question.setAnswerTrue(response.getJSONArray(i).getBoolean(1));
+                        Log.d("check", "onResponse: "+response);
                         questionList.add(question);
-
-                        //Log.d("question:", "" + response.getJSONArray(0).get(0));
-                        //Log.d("answer:", "" + response.getJSONArray(0).get(1));
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }

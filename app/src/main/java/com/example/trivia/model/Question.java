@@ -1,8 +1,8 @@
 package com.example.trivia.model;
 
 public class Question {
-    private String answer;
-    private Boolean answerTrue;
+    private String answer; //question
+    private Boolean answerTrue; //answer
 
     public Question() {
     }

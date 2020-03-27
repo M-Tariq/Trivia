@@ -3,6 +3,9 @@
     <string name="text_true">True</string>
     <string name="text_false">False</string>
     <string name="todo">TODO</string>
+    <string name="Your_score">Your Score: 0</string>
     <string name="question_counter">0 out of 100</string>
     <string name="sample_question">This is sample question, how are you?</string>
+    <string name="textview">TextView</string>
+    <string name="highest_score">"High Score: 999"</string>
 </resources>

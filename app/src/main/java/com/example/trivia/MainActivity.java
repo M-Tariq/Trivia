@@ -130,7 +130,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 shakeAnimation();
                 if (score > 0) {
                     score -= 10;
-                    scoreTv.setText("" + score);
+                    scoreTv.setText("Your Score: " + score);
                     Toast.makeText(this, "Wrong!!", Toast.LENGTH_SHORT).show();
                 }
 
